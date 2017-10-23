@@ -1,4 +1,4 @@
-PROJECT = emqttd_plugin_couchdb_bridge
+PROJECT = emq_plugin_couchdb_bridge
 PROJECT_DESCRIPTION = EMQ Custom Plugin
 PROJECT_VERSION = 1.0
 
@@ -18,4 +18,4 @@ include erlang.mk
 app:: rebar.config
 
 app.config::
-	./deps/cuttlefish/cuttlefish -l info -e etc/ -c etc/emqttd_plugin_couchdb_bridge.conf -i priv/emqttd_plugin_couchdb_bridge.schema -d data
+	./deps/cuttlefish/cuttlefish -l info -e etc/ -c etc/emq_plugin_couchdb_bridge.conf -i priv/emq_plugin_couchdb_bridge.schema -d data
