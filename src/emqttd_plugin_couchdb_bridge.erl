@@ -1,11 +1,11 @@
 %%%-----------------------------------------------------------------------------
 %%% Copyright (c) 2017 NGE
 %%% @doc
-%%% emqttd_plugin_couchdb_bridge.
+%%% emq_plugin_couchdb_bridge.
 %%%
 %%% @end
 %%%-----------------------------------------------------------------------------
--module(emqttd_plugin_couchdb_bridge).
+-module(emq_plugin_couchdb_bridge).
 
 -include_lib("emqttd/include/emqttd.hrl").
 
@@ -220,7 +220,7 @@ on_message_acked(ClientId, Username, Message, _Env) ->
 
 couchdb_init(_Env) ->
     %% Get parameters
-    {ok, Couchdb} = application:get_env(emqttd_plugin_couchdb_bridge, couchdb),
+    {ok, Couchdb} = application:get_env(emq_plugin_couchdb_bridge, couchdb),
     CouchDbUrl = proplists:get_value(db_server, Couchdb),
     Username_db= proplists:get_value(username, Couchdb),
 	Password_db= proplists:get_value(password, Couchdb),

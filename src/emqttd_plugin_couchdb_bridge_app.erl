@@ -1,9 +1,9 @@
 %%% @doc
-%%% emqttd_plugin_couchdb_bridge.
+%%% emq_plugin_couchdb_bridge.
 %%%
 %%% @end
 %%%-----------------------------------------------------------------------------
--module(emqttd_plugin_couchdb_bridge_app).
+-module(emq_plugin_couchdb_bridge_app).
 
 -behaviour(application).
 
@@ -15,10 +15,10 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-    {ok, Sup} = emqttd_plugin_couchdb_bridge_sup:start_link(),
-    emqttd_plugin_couchdb_bridge:load(application:get_all_env()),
+    {ok, Sup} = emq_plugin_couchdb_bridge_sup:start_link(),
+    emq_plugin_couchdb_bridge:load(application:get_all_env()),
     {ok, Sup}.
 
 stop(_State) ->
-    emqttd_plugin_couchdb_bridge:unload().
+    emq_plugin_couchdb_bridge:unload().
 

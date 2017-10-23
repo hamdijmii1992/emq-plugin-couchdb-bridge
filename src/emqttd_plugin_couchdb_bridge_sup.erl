@@ -1,9 +1,9 @@
 %%% @doc
-%%% emqttd_plugin_couchdb_bridge.
+%%% emq_plugin_couchdb_bridge.
 %%%
 %%% @end
 %%%-----------------------------------------------------------------------------
--module(emqttd_plugin_couchdb_bridge_sup).
+-module(emq_plugin_couchdb_bridge_sup).
 
 -behaviour(supervisor).
 

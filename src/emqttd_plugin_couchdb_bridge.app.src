@@ -1,6 +1,6 @@
-{application, emqttd_plugin_couchdb_bridge,
+{application, emq_plugin_couchdb_bridge,
  [
-  {description, "emqttd_plugin_couchdb_bridge"},
+  {description, "emq_plugin_couchdb_bridge"},
   {vsn, "1.1.2"},
   {registered, []},
   {applications, [
@@ -9,6 +9,6 @@
                   couchbeam
                  ]},
   {modules, []},
-  {mod, { emqttd_plugin_couchdb_bridge_app, []}},
+  {mod, { emq_plugin_couchdb_bridge_app, []}},
   {env, []}
  ]}.
