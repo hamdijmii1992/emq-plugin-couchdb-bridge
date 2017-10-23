@@ -8,6 +8,7 @@
                   stdlib,
                   couchbeam
                  ]},
+  {modules, []},
   {mod, { emqttd_plugin_couchdb_bridge_app, []}},
   {env, []}
  ]}.
