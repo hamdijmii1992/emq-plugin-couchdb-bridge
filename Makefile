@@ -1,10 +1,11 @@
 PROJECT = emq_plugin_couchdb_bridge
 PROJECT_DESCRIPTION = EMQ Custom Plugin
-PROJECT_VERSION = 1.0
+PROJECT_VERSION = 2.3
 
-BUILD_DEPS = emqttd cuttlefish
+BUILD_DEPS = emqttd cuttlefish 
 dep_emqttd = git https://github.com/emqtt/emqttd master
 dep_cuttlefish = git https://github.com/emqtt/cuttlefish
+#dep_couchbeam = git https://github.com/benoitc/couchbeam master
 
 ERLC_OPTS += +debug_info
 ERLC_OPTS += +'{parse_transform, lager_transform}'
